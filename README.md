@@ -141,8 +141,8 @@ automated-support-ticket-classification-nlp/
     ├── final_experimental_summary.csv
     ├── queue_classification_report.csv
     ├── priority_classification_report.csv
-    ├── queue_confusion_matrix.png
-    └── priority_confusion_matrix.png
+    ├── queue_confusion_matrix.csv
+    └── priority_confusion_matrix.csv
 ```
 
 ## How to Run
@@ -166,6 +166,8 @@ python code/support_ticket_nlp.py
 ```bash
 python code/support_ticket_demo.py
 ```
+
+The experiment script writes generated comparison, classification-report, confusion-matrix, and sample-prediction CSV files into `results/`.
 
 ## Limitations
 
