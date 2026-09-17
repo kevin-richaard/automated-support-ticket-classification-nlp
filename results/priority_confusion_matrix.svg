@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="900" viewBox="0 0 1000 900">
+<rect width="100%" height="100%" fill="white"/>
+<text x="500" y="55" text-anchor="middle" font-family="Arial" font-size="30">Priority Classification — Linear SVM Confusion Matrix</text>
+<rect x="170" y="100" width="263.33" height="210" fill="#fde725"/><text x="301.67" y="215" text-anchor="middle" font-family="Arial" font-size="22" fill="black">1603</text>
+<rect x="433.33" y="100" width="263.33" height="210" fill="#440154"/><text x="565" y="215" text-anchor="middle" font-family="Arial" font-size="22" fill="white">151</text>
+<rect x="696.66" y="100" width="263.34" height="210" fill="#3e4989"/><text x="828.33" y="215" text-anchor="middle" font-family="Arial" font-size="22" fill="white">482</text>
+<rect x="170" y="310" width="263.33" height="210" fill="#481467"/><text x="301.67" y="425" text-anchor="middle" font-family="Arial" font-size="22" fill="white">205</text>
+<rect x="433.33" y="310" width="263.33" height="210" fill="#26828e"/><text x="565" y="425" text-anchor="middle" font-family="Arial" font-size="22" fill="black">691</text>
+<rect x="696.66" y="310" width="263.34" height="210" fill="#482878"/><text x="828.33" y="425" text-anchor="middle" font-family="Arial" font-size="22" fill="white">283</text>
+<rect x="170" y="520" width="263.33" height="210" fill="#3f4788"/><text x="301.67" y="635" text-anchor="middle" font-family="Arial" font-size="22" fill="white">557</text>
+<rect x="433.33" y="520" width="263.33" height="210" fill="#440154"/><text x="565" y="635" text-anchor="middle" font-family="Arial" font-size="22" fill="white">227</text>
+<rect x="696.66" y="520" width="263.34" height="210" fill="#e6e819"/><text x="828.33" y="635" text-anchor="middle" font-family="Arial" font-size="22" fill="black">1519</text>
+<text x="301.67" y="770" text-anchor="middle" font-family="Arial" font-size="20">high</text><text x="565" y="770" text-anchor="middle" font-family="Arial" font-size="20">low</text><text x="828.33" y="770" text-anchor="middle" font-family="Arial" font-size="20">medium</text>
+<text x="140" y="210" text-anchor="end" font-family="Arial" font-size="20">high</text><text x="140" y="420" text-anchor="end" font-family="Arial" font-size="20">low</text><text x="140" y="630" text-anchor="end" font-family="Arial" font-size="20">medium</text>
+<text x="500" y="850" text-anchor="middle" font-family="Arial" font-size="20">Predicted label</text><text x="35" y="420" text-anchor="middle" transform="rotate(-90 35,420)" font-family="Arial" font-size="20">True label</text>
+</svg>
