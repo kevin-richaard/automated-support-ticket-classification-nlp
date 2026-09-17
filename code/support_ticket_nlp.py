@@ -15,6 +15,8 @@ from sklearn.metrics import (
 )
 
 BASE_DIR = Path(__file__).resolve().parent.parent
+RESULTS_DIR = BASE_DIR / "results"
+RESULTS_DIR.mkdir(exist_ok=True)
 CSV_FILE = str(BASE_DIR / "aa_dataset-tickets-multi-lang-5-2-50-version.csv")
 RANDOM_STATE = 42
 
@@ -88,7 +90,7 @@ for task_name, target in [("Queue", queue), ("Priority", priority)]:
         all_results.append(row)
 
 results = pd.DataFrame(all_results)
-results.to_csv(BASE_DIR / "model_comparison_results.csv", index=False)
+results.to_csv(RESULTS_DIR / "model_comparison_results.csv", index=False)
 
 for task_name, target in [("Queue", queue), ("Priority", priority)]:
     model, pred = trained[(task_name, "Linear SVM")]
@@ -99,14 +101,14 @@ for task_name, target in [("Queue", queue), ("Priority", priority)]:
             output_dict=True, zero_division=0
         )
     ).transpose()
-    report.to_csv(BASE_DIR / f"{task_name.lower()}_classification_report.csv")
+    report.to_csv(RESULTS_DIR / f"{task_name.lower()}_classification_report.csv")
 
     y_true = target.iloc[test_idx].astype(str).to_numpy()
     pred = np.asarray(pred).astype(str)
     labels = list(map(str, model.classes_))
     cm = confusion_matrix(y_true, pred, labels=labels)
     pd.DataFrame(cm, index=labels, columns=labels).to_csv(
-        BASE_DIR / f"{task_name.lower()}_confusion_matrix.csv"
+        RESULTS_DIR / f"{task_name.lower()}_confusion_matrix.csv"
     )
 
 sample = df.loc[test_idx[:10], ["subject", "body", "language"]].copy()
@@ -115,7 +117,7 @@ q_model = trained[("Queue", "Linear SVM")][0]
 p_model = trained[("Priority", "Linear SVM")][0]
 sample["predicted_queue"] = q_model.predict(sample_X)
 sample["predicted_priority"] = p_model.predict(sample_X)
-sample.to_csv(BASE_DIR / "sample_predictions.csv", index=False)
+sample.to_csv(RESULTS_DIR / "sample_predictions.csv", index=False)
 
 print("\nDataset shape:", df.shape)
 print("Training samples:", len(train_idx))
